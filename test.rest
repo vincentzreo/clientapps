@@ -1,0 +1,21 @@
+### GET top stories
+
+GET https://hacker-news.firebaseio.com/v0/topstories.json
+
+### GET item
+
+@id = 41392128
+
+GET https://hacker-news.firebaseio.com/v0/item/{{id}}.json
+
+### GET comments
+
+@comment_id = 41392938
+
+GET https://hacker-news.firebaseio.com/v0/item/{{comment_id}}.json
+
+### GET user
+
+@user_id = woodruffw
+
+GET https://hacker-news.firebaseio.com/v0/user/{{user_id}}.json
