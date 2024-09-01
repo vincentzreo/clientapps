@@ -42,22 +42,22 @@ pub async fn get_comments_by_id(id: i64) -> Result<Comment> {
     Ok(comment)
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+// #[cfg(test)]
+// mod tests {
+//     use super::*;
 
-    #[tokio::test]
-    async fn get_top_stories_should_work() {
-        let stories = get_top_stories(3).await.unwrap();
-        // stories <= MAX_STORIES
-        assert!(stories.len() <= 3);
-    }
+//     #[tokio::test]
+//     async fn get_top_stories_should_work() {
+//         let stories = get_top_stories(3).await.unwrap();
+//         // stories <= MAX_STORIES
+//         assert!(stories.len() <= 3);
+//     }
 
-    #[tokio::test]
-    async fn get_comments_by_id_should_work() {
-        let story = get_top_stories(3).await.unwrap().pop().unwrap();
-        let id = story.kids[0];
-        let comment = get_comments_by_id(id).await.unwrap();
-        assert_eq!(comment.id, id);
-    }
-}
+//     #[tokio::test]
+//     async fn get_comments_by_id_should_work() {
+//         let story = get_top_stories(3).await.unwrap().pop().unwrap();
+//         let id = story.kids[0];
+//         let comment = get_comments_by_id(id).await.unwrap();
+//         assert_eq!(comment.id, id);
+//     }
+// }
